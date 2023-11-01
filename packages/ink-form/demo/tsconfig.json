@@ -1,3 +1,8 @@
 {
-  "extends": "../tsconfig.demo.json",
+  "extends": "@internal/config/tsconfig.demo.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["../src", "../src/**/*", "./**/*"],
+  "exclude": ["dist"]
 }

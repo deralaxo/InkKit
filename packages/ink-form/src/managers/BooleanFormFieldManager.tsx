@@ -12,7 +12,7 @@ export class BooleanFormFieldManager implements FormFieldManager<FormFieldBoolea
   public type: TypeOfField<FormFieldBoolean> = 'boolean';
 
   public renderField: React.FC<SpecificFormFieldRendererProps<FormFieldBoolean>> = props => {
-    useInput((input, key) => {
+    useInput((input, _) => {
       if (input === ' ') {
         props.onChange(!props.value);
       }

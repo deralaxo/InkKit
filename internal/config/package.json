@@ -1,0 +1,12 @@
+{
+  "name": "@internal/config",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "tsconfig.base.json",
+    "tsconfig.demo.json"
+  ],
+  "author": "Dawid Harat",
+  "license": "MIT"
+}

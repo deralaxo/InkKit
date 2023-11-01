@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text } from 'ink';
-import { render } from 'ink';
 
 import Table from '../src/index.js';
 

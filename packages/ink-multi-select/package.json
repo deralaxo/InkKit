@@ -19,7 +19,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "build:demo": "tsc -p tsconfig.demo.json",
+    "build:demo": "tsc -p demo/tsconfig.json",
     "clean": "rm -rf dist demo/dist node_modules .turbo",
     "demo": "pnpm build:demo && node demo/dist/demo/index.js"
   },
@@ -31,5 +31,8 @@
   },
   "directories": {
     "lib": "dist"
+  },
+  "devDependencies": {
+    "@internal/config": "workspace:^"
   }
 }

@@ -196,7 +196,7 @@ export default class Table<T extends ScalarDict> extends React.Component<
 
   /* Render */
 
-  render() {
+  override render() {
     /* Data */
     const columns = this.getColumns()
     const headings = this.getHeadings()

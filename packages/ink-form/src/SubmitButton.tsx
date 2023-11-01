@@ -6,7 +6,7 @@ export const SubmitButton: React.FC<{
   onSubmit: () => void;
 }> = props => {
   const { isFocused } = useFocus({ isActive: props.canSubmit });
-  useInput((input, key) => {
+  useInput((_, key) => {
     if (key.return && isFocused && props.canSubmit) {
       props.onSubmit();
     }

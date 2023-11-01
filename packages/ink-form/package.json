@@ -33,7 +33,7 @@
   "scripts": {
     "build": "tsc",
     "build:docs": "typedoc --out docs src/index.ts",
-    "build:demo": "tsc -p tsconfig.demo.json",
+    "build:demo": "tsc -p demo/tsconfig.json",
     "clean": "rm -rf dist demo/dist node_modules .turbo docs",
     "demo": "pnpm build:demo && node demo/dist/demo/overview.js",
     "prettier:check": "prettier --check .",
@@ -43,6 +43,7 @@
     "@inkkit/ink-multi-select": "workspace:*"
   },
   "devDependencies": {
+    "@internal/config": "workspace:^",
     "typedoc": "0.25.3"
   }
 }

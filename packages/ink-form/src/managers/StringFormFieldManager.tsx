@@ -6,7 +6,7 @@ import {
   TypeOfField,
 } from '../types.js';
 import React from 'react';
-import { Box, Text, Transform } from 'ink';
+import { Box, Transform } from 'ink';
 import TextInput from 'ink-text-input';
 
 export class StringFormFieldManager implements FormFieldManager<FormFieldString> {
@@ -39,7 +39,7 @@ export class StringFormFieldManager implements FormFieldManager<FormFieldString>
           ? text =>
               text
                 .split('')
-                .map(char => '*')
+                .map(() => '*')
                 .join('')
           : text => text
       }

@@ -8,7 +8,7 @@ const INTEGER_REGEX = /^-?\d+$/;
 
 export const NumberFieldRenderer: React.FC<
   SpecificFormFieldRendererProps<FormFieldInteger | FormFieldFloat> & { isFloat: boolean }
-> = props => {
+> = (props) => {
   const regex = props.isFloat ? FLOAT_REGEX : INTEGER_REGEX;
   const parse = props.isFloat ? parseFloat : parseInt;
 
@@ -33,7 +33,7 @@ export const NumberFieldRenderer: React.FC<
     }
   };
 
-  useInput((input, key) => {
+  useInput((_, key) => {
     if (typeof props.value === 'number') {
       if (key.upArrow) {
         change('' + ((props.value ?? 0) + (props.field.step ?? 1)));
@@ -43,7 +43,10 @@ export const NumberFieldRenderer: React.FC<
     } else {
       if (key.upArrow || key.downArrow) {
         change(
-          '' + ((props.field.min ?? 0) <= 0 && (props.field.max ?? 0) >= 0 ? 0 : props.field.min ?? props.field.max)
+          '' +
+            ((props.field.min ?? 0) <= 0 && (props.field.max ?? 0) >= 0
+              ? 0
+              : props.field.min ?? props.field.max),
         );
       }
     }
@@ -54,7 +57,7 @@ export const NumberFieldRenderer: React.FC<
       <Box>
         <TextInput
           value={'' + (props.value ?? '')}
-          onChange={value => {
+          onChange={(value) => {
             if (regex.test(value)) {
               props.onClearError();
               change(value);

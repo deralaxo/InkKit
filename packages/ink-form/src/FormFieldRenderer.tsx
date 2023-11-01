@@ -33,7 +33,7 @@ export const FormFieldRenderer: React.FC<FormFieldRendererProps<any>> = props =>
   const { isFocused } = useFocus({});
 
   useInput(
-    (input, key) => {
+    (_, key) => {
       if (!isEditing && key.return && !key.ctrl && !key.meta) {
         props.onSetEditingField(props.field.label ?? props.field.name);
       } else if (isEditing && key.escape) {

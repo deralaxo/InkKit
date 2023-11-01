@@ -1,6 +1,6 @@
 import { FormStructure } from './types.js';
 
-export const canSubmit = (form: FormStructure, value: object) => {
+export const canSubmit = (form: FormStructure, value: {[key:string]: any}) => {
   return form.sections
     .map(section => section.fields)
     .reduce((fields1, fields2) => [...fields1, ...fields2], [])

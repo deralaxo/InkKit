@@ -13,7 +13,7 @@ npm install @inkkit/ink-table
 ## Usage
 
 ```jsx
-import Table from 'ink-table'
+import Table from '@inkkit/ink-table'
 
 const data = [
   {

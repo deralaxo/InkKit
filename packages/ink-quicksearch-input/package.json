@@ -1,6 +1,6 @@
 {
   "name": "@inkkit/ink-quicksearch-input",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Quicksearch Input Component for Ink 4",
   "main": "dist/QuickSearchInput.js",
   "types": "dist/QuickSearchInput.d.ts",
@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/deralaxo/InkKit/issues"
   },
-  "homepage": "https://github.com/deralaxo/InkKit/packages/ink-quicksearch-input#readme",
+  "homepage": "https://github.com/deralaxo/InkKit/tree/main/packages/ink-quicksearch-input#readme",
   "dependencies": {
     "@types/has-ansi": "3.0.0",
     "has-ansi": "3.0.0",

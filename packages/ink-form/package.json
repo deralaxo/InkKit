@@ -1,6 +1,6 @@
 {
   "name": "@inkkit/ink-form",
-  "version": "1.0.22",
+  "version": "1.0.0",
   "description": "Complex user-friendly form component for React Ink",
   "author": "Lukas Bach <lbach@outlook.de>",
   "license": "MIT",
@@ -26,7 +26,7 @@
     "type": "git",
     "url": "git+https://github.com/deralaxo/InkKit.git"
   },
-  "homepage": "https://github.com/deralaxo/InkKit/packages/ink-form#readme",
+  "homepage": "https://github.com/deralaxo/InkKit/tree/main/packages/ink-form#readme",
   "bugs": {
     "url": "https://github.com/deralaxo/InkKit/issues"
   },

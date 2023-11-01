@@ -1,6 +1,6 @@
 {
   "name": "@inkkit/ink-table",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A table component for Ink.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/deralaxo/InkKit/issues"
   },
-  "homepage": "https://github.com/deralaxo/InkKit/packages/ink-table#readme",
+  "homepage": "https://github.com/deralaxo/InkKit/tree/main/packages/ink-table#readme",
   "type": "module",
   "scripts": {
     "build": "tsc",

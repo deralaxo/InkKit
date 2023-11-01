@@ -12,7 +12,7 @@ importers:
         specifier: 0.21.0
         version: 0.21.0
       '@turbo/gen':
-        specifier: ^1.10.16
+        specifier: 1.10.16
         version: 1.10.16(@types/node@20.8.10)(typescript@5.2.2)
       ink:
         specifier: 4.4.1
@@ -142,6 +142,12 @@ importers:
       ts-node:
         specifier: 9.1.1
         version: 9.1.1(typescript@4.7.4)
+
+  packages/jd-jd-jd:
+    devDependencies:
+      '@internal/config':
+        specifier: workspace:*
+        version: link:../../internal/config
 
 packages:
 

@@ -1,14 +1,14 @@
 {
-  "name": "@inkkit/ink-divider",
+  "name": "@inkkit/{{ name }}",
   "version": "1.0.0",
-  "description": "A divider component for Ink",
-  "author": "Dawid Harat",
+  "description": "{{ description }}",
+  "author": "{{ author }}",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/deralaxo/InkKit.git"
   },
-  "homepage": "https://github.com/deralaxo/InkKit/tree/main/packages/ink-divider#readme",
+  "homepage": "https://github.com/deralaxo/InkKit/tree/main/packages/{{ name }}#readme",
   "bugs": {
     "url": "https://github.com/deralaxo/InkKit/issues"
   },
@@ -23,10 +23,7 @@
     "clean": "rm -rf dist demo/dist node_modules .turbo",
     "demo": "pnpm build:demo && node demo/dist/demo/index.js"
   },
-  "dependencies": {
-    "string-width": "7.0.0"
-  },
   "devDependencies": {
-    "@internal/config": "workspace:^"
+    "@internal/config": "workspace:*"
   }
 }

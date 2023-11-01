@@ -1,0 +1,48 @@
+{
+  "name": "@inkkit/ink-form",
+  "version": "1.0.22",
+  "description": "Complex user-friendly form component for React Ink",
+  "author": "Lukas Bach <lbach@outlook.de>",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "react",
+    "cli",
+    "ui",
+    "component",
+    "input",
+    "forms",
+    "reusable",
+    "ink",
+    "commandline",
+    "cmd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deralaxo/InkKit.git"
+  },
+  "homepage": "https://github.com/deralaxo/InkKit/packages/ink-form#readme",
+  "bugs": {
+    "url": "https://github.com/deralaxo/InkKit/issues"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:docs": "typedoc --out docs src/index.ts",
+    "build:demo": "tsc -p tsconfig.demo.json",
+    "clean": "rm -rf dist demo/dist node_modules .turbo docs",
+    "demo": "pnpm build:demo && node demo/dist/demo/overview.js",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write ."
+  },
+  "dependencies": {
+    "@inkkit/ink-multi-select": "workspace:*"
+  },
+  "devDependencies": {
+    "typedoc": "0.25.3"
+  }
+}

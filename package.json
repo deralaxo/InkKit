@@ -1,0 +1,47 @@
+{
+  "name": "inkkit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    
+    "dev": "turbo dev --parallel",
+    "format": "turbo format --continue -- --cache --cache-location='node_modules/.cache/.prettiercache'",
+    "format:fix": "turbo format --continue -- --write --cache --cache-location='node_modules/.cache/.prettiercache'",
+    "lint": "turbo lint --continue -- --cache --cache-location 'node_modules/.cache/.eslintcache' && manypkg check",
+    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location 'node_modules/.cache/.eslintcache' && manypkg fix",
+    "typecheck": "turbo typecheck"
+  },
+  "author": "Dawid Harat",
+  "license": "MIT",
+  "prettier": {
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "printWidth": 100,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false
+  },
+  "dependencies": {
+    "@manypkg/cli": "0.21.0",
+    "ink": "4.4.1",
+    "ink-select-input": "5.0.0",
+    "ink-text-input": "5.0.1",
+    "react": "18.2.0",
+    "turbo": "1.10.16",
+    "typescript": "5.2.2",
+    "prettier": "3.0.3"
+  },
+  "devDependencies": {
+    "@sindresorhus/tsconfig": "5.0.0",
+    "@types/ink-text-input": "2.0.4",
+    "@types/node": "20.8.10",
+    "@types/react": "18.2.33"
+  }
+}

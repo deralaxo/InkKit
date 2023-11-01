@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "lib": ["dom", "es2018", "ES2020"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "declaration": true,
+    "module": "Node16",
+    "outDir": "./demo/dist",
+    "strictNullChecks": true,
+    "moduleResolution": "Node16",
+    "moduleDetection": "force",
+    "allowJs": false,
+
+    "stripInternal": true,
+    "skipLibCheck": true
+  },
+  "include": ["src", "demo"],
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx", "lib", "docs", "demo/dist"]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@inkkit/ink-multi-select",
+  "version": "1.0.223",
+  "description": "Multi-select component for Ink",
+  "author": "Dawid Harat",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deralaxo/InkKit.git"
+  },
+  "homepage": "https://github.com/deralaxo/InkKit/packages/ink-multi-select#readme",
+  "bugs": {
+    "url": "https://github.com/deralaxo/InkKit/issues"
+  },
+  "keywords": [],
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "build:demo": "tsc -p tsconfig.demo.json",
+    "clean": "rm -rf dist demo/dist node_modules .turbo",
+    "demo": "pnpm build:demo && node demo/dist/demo/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "figures": "6.0.1"
+  },
+  "directories": {
+    "lib": "dist"
+  }
+}

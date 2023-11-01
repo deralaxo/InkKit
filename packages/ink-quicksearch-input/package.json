@@ -1,0 +1,42 @@
+{
+  "name": "@inkkit/ink-quicksearch-input",
+  "version": "1.0.1",
+  "description": "Quicksearch Input Component for Ink 4",
+  "main": "dist/QuickSearchInput.js",
+  "types": "dist/QuickSearchInput.d.ts",
+  "type": "module",
+  "author": "John O'Sullivan <john@eximchain.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "build:demo": "tsc -p tsconfig.demo.json",
+    "clean": "rm -rf dist demo/dist node_modules .turbo",
+    "demo": "pnpm build:demo && node demo/dist/demo/ExampleDirectory.js",
+    "dev": "tsc --watch"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deralaxo/InkKit.git"
+  },
+  "keywords": [
+    "ink",
+    "ink-component"
+  ],
+  "bugs": {
+    "url": "https://github.com/deralaxo/InkKit/issues"
+  },
+  "homepage": "https://github.com/deralaxo/InkKit/packages/ink-quicksearch-input#readme",
+  "dependencies": {
+    "@types/has-ansi": "3.0.0",
+    "has-ansi": "3.0.0",
+    "keypress": "0.2.1",
+    "lodash.isequal": "4.5.0",
+    "term-size": "3.0.2"
+  },
+  "devDependencies": {
+    "@types/lodash.isequal": "4.5.7"
+  }
+}

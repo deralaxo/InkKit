@@ -1,6 +1,6 @@
 {
   "name": "@inkkit/ink-divider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A divider component for Ink",
   "author": "Dawid Harat",
   "license": "MIT",
@@ -21,7 +21,8 @@
     "build": "tsc",
     "build:demo": "tsc -p demo/tsconfig.json",
     "clean": "rm -rf dist demo/dist node_modules .turbo",
-    "demo": "pnpm build:demo && node demo/dist/demo/index.js"
+    "demo": "pnpm build:demo && node demo/dist/demo/index.js",
+    "prepublishOnly": "rm -rf dist && pnpm build"
   },
   "dependencies": {
     "string-width": "7.0.0"

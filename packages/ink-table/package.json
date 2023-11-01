@@ -20,7 +20,8 @@
     "build:demo": "tsc -p demo/tsconfig.json",
     "clean": "rm -rf dist demo/dist node_modules .turbo",
     "demo": "pnpm build:demo && node demo/dist/demo/index.js",
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "rm -rf dist && pnpm build"
   },
   "files": [
     "dist"

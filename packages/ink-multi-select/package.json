@@ -21,7 +21,8 @@
     "build": "tsc",
     "build:demo": "tsc -p demo/tsconfig.json",
     "clean": "rm -rf dist demo/dist node_modules .turbo",
-    "demo": "pnpm build:demo && node demo/dist/demo/index.js"
+    "demo": "pnpm build:demo && node demo/dist/demo/index.js",
+    "prepublishOnly": "rm -rf dist && pnpm build"
   },
   "files": [
     "dist"

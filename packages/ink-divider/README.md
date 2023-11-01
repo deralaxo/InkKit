@@ -7,7 +7,7 @@ Refactored version of [Jure's ink-divider](https://github.com/JureSotosek/ink-di
 ## Install
 
 ```
-$ npm install @inkkit/ink-multi-select
+$ npm install @inkkit/ink-divider
 ```
 
 ## Usage

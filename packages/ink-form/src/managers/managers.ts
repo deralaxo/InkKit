@@ -6,18 +6,12 @@ import { FormField, FormFieldManager, TypeOfField } from '../types.js';
 import { StringFormFieldManager } from './StringFormFieldManager.js';
 import { BooleanFormFieldManager } from './BooleanFormFieldManager.js';
 
-export const managers: FormFieldManager<FormField>[] = [
-  // @ts-expect-error
+export const managers: FormFieldManager<any>[] = [
   new FloatFormFieldManager(),
-  // @ts-expect-error
   new IntegerFormFieldManager(),
-  // @ts-expect-error
   new MultiSelectFormFieldManager(),
-  // @ts-expect-error
   new SelectFormFieldManager(),
-  // @ts-expect-error
   new StringFormFieldManager(),
-  // @ts-expect-error
   new BooleanFormFieldManager(),
 ];
 

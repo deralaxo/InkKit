@@ -143,7 +143,7 @@ importers:
         specifier: 9.1.1
         version: 9.1.1(typescript@4.7.4)
 
-  packages/jd-jd-jd:
+  packages/testing:
     devDependencies:
       '@internal/config':
         specifier: workspace:*

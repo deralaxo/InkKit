@@ -38,7 +38,7 @@ export interface FormProps {
    * You can use custom field implementations, by specifying their ``type`` attribute to a custom
    * value and supplying a FormFieldManager here that can handle this type.
    */
-  customManagers?: FormFieldManager<FormField | AbstractFormField<any, any>>[];
+  customManagers?: FormFieldManager<any>[];
 }
 
 /**
@@ -91,8 +91,8 @@ export type FormField =
   | FormFieldBoolean
   | AbstractFormField<any, any>;
 
-export type ValueOfField<T extends FormField> = T extends AbstractFormField<any, infer V> ? V : never;
-export type TypeOfField<T extends FormField> = T extends AbstractFormField<infer V, any> ? V : never;
+export type ValueOfField<T extends FormField> = T extends AbstractFormField<any, infer V> ? V : any;
+export type TypeOfField<T extends FormField> = T extends AbstractFormField<infer V, any> ? V : any;
 
 export type AbstractFormField<T extends string, V> = {
   /**

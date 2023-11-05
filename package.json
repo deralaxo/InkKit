@@ -43,6 +43,7 @@
     "@sindresorhus/tsconfig": "5.0.0",
     "@types/ink-text-input": "2.0.4",
     "@types/node": "20.8.10",
-    "@types/react": "18.2.33"
+    "@types/react": "18.2.33",
+    "ink-testing-library": "3.0.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@inkkit/ink-quicksearch-input",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Quicksearch Input Component for Ink 4",
   "main": "dist/QuickSearchInput.js",
   "types": "dist/QuickSearchInput.d.ts",
@@ -38,7 +38,7 @@
     "terminal-size": "4.0.0"
   },
   "devDependencies": {
-    "@internal/config": "workspace:^",
+    "@internal/config": "workspace:*",
     "@types/lodash.isequal": "4.5.7"
   }
 }

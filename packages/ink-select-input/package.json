@@ -1,0 +1,53 @@
+{
+	"name": "@inkkit/ink-select-input",
+	"version": "5.0.1",
+	"description": "Select input component for Ink",
+	"author": {
+		"name": "Vadim Demedes",
+		"email": "vdemedes@gmail.com",
+		"url": "https://www.github.com/vadimdemedes"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/deralaxo/InkKit.git"
+	},
+	"homepage": "https://github.com/deralaxo/InkKit/tree/main/packages/ink-select-input#readme",
+	"bugs": {
+		"url": "https://github.com/deralaxo/InkKit/issues"
+	},
+	"keywords": [
+		"ink",
+		"ink-component"
+	],
+	"type": "module",
+	"main": "dist/index.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"build:demo": "tsc -p demo/tsconfig.json",
+		"clean": "rm -rf dist demo/dist node_modules .turbo",
+		"demo": "pnpm build:demo && node demo/dist/demo/index.js",
+		"prepublishOnly": "rm -rf dist && pnpm build"
+	},
+	"dependencies": {
+		"arr-rotate": "1.0.0",
+		"figures": "6.0.1",
+		"lodash.isequal": "4.5.0"
+	},
+	"devDependencies": {
+		"@internal/config": "workspace:*",
+		"@types/lodash.isequal": "4.5.7"
+	},
+	"ava": {
+		"extensions": {
+			"ts": "module",
+			"tsx": "module"
+		},
+		"nodeArguments": [
+			"--loader=ts-node/esm"
+		]
+	}
+}

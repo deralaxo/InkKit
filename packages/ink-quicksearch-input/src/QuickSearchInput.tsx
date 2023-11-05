@@ -83,7 +83,7 @@ export interface QuickSearchProps {
   statusComponent?: FunctionComponent<StatusProps>;
 }
 
-export const QuickSearch: FC<QuickSearchProps> = (props) => {
+export const QuickSearchInput: FC<QuickSearchProps> = (props) => {
   const {
     items,
     onSelect,
@@ -333,4 +333,4 @@ const defaultProps = {
   statusComponent: StatusComponent,
 };
 
-export default QuickSearch;
+export default QuickSearchInput;

@@ -1,12 +1,11 @@
-import React, { FC, useState } from "react";
-import { Box, Text } from "ink";
+import React, { FC, useState } from 'react';
+import { Box, Text } from 'ink';
+import QuickSearchInput from '../src/QuickSearchInput.js';
 
-import QuickSearch from "../src/QuickSearchInput.js";
-
-export const Example2Name = "Case-Sensitive, No Query/Status Element";
+export const Example2Name = 'Case-Sensitive, No Query/Status Element';
 
 export const Example2: FC = () => {
-  const [selectedValue, setSelectedValue] = useState("");
+  const [selectedValue, setSelectedValue] = useState('');
   return (
     <>
       <Text key="header">Example 2: {Example2Name}</Text>
@@ -14,17 +13,17 @@ export const Example2: FC = () => {
         Selected item is {selectedValue}
       </Text>
       <Box key="spacer" marginBottom={2} />
-      <QuickSearch
+      <QuickSearchInput
         key="input"
         {...{
           items: [
-            { label: "Animal" },
-            { label: "Antilope" },
-            { label: "Animation" },
-            { label: "Animate" },
-            { label: "Arizona" },
-            { label: "Aria" },
-            { label: "Arid" },
+            { label: 'Animal' },
+            { label: 'Antilope' },
+            { label: 'Animation' },
+            { label: 'Animate' },
+            { label: 'Arizona' },
+            { label: 'Aria' },
+            { label: 'Arid' },
           ],
           onSelect: (d) => setSelectedValue(d.label),
           caseSensitive: true,

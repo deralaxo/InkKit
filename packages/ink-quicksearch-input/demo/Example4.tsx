@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Box, Text } from 'ink';
-import QuickSearch from '../src/QuickSearchInput.js';
 import terminalSize from 'terminal-size';
+import QuickSearchInput from '../src/QuickSearchInput.js';
 
 export const Example4Name =
   'Long list limited to terminal size; non-matching queries are not allowed';
@@ -15,7 +15,7 @@ export const Example4: FC = () => {
         Selected item is {selectedValue}
       </Text>
       <Box key="spacer" marginBottom={1} />
-      <QuickSearch
+      <QuickSearchInput
         key="input"
         {...{
           items: [

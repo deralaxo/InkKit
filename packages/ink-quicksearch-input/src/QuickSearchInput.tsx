@@ -6,16 +6,16 @@ import React, {
   useRef,
   useMemo,
   PropsWithChildren,
-} from "react";
-import { useStdin, Text, Box } from "ink";
-import hasAnsi from "has-ansi";
-import isEqual from "lodash.isequal";
+} from 'react';
+import { useStdin, Text, Box } from 'ink';
+import hasAnsi from 'has-ansi';
+import isEqual from 'lodash.isequal';
 // @ts-ignore This module makes stdin emit keypress events,
 // that's it.  Hasn't been published in six years, no types
 // available.
-import keypress from "keypress";
+import keypress from 'keypress';
 
-const defaultValue = { label: "" }; // Used as return for empty array
+const defaultValue = { label: '' }; // Used as return for empty array
 
 export type IsSelected = PropsWithChildren<{
   isSelected: boolean;
@@ -27,7 +27,7 @@ export interface ItemProps extends IsSelected {
 }
 // For the following four, whitespace is important
 const IndicatorComponent: FC<IsSelected> = ({ isSelected }) => {
-  return <Text color="#00FF00">{isSelected ? ">" : " "} </Text>;
+  return <Text color="#00FF00">{isSelected ? '>' : ' '} </Text>;
 };
 
 interface IsSelectedProps {
@@ -36,12 +36,12 @@ interface IsSelectedProps {
 }
 
 const ItemComponent: FC<IsSelectedProps> = ({ isSelected, children }) => (
-  <Text color={isSelected ? "#00FF00" : ""}>{children}</Text>
+  <Text color={isSelected ? '#00FF00' : ''}>{children}</Text>
 );
 
-const HighlightComponent: FC<{ children?: React.ReactNode }> = ({
-  children,
-}) => <Text backgroundColor="#6C71C4">{children}</Text>;
+const HighlightComponent: FC<{ children?: React.ReactNode }> = ({ children }) => (
+  <Text backgroundColor="#6C71C4">{children}</Text>
+);
 
 export interface StatusProps {
   hasMatch: boolean;
@@ -51,8 +51,8 @@ export interface StatusProps {
 
 const StatusComponent: FC<StatusProps> = ({ children, label }) => (
   <Text>
-    {`${label || "Query"}: `}
-    <Text color={"#74BEFF"}>{children}</Text>
+    {`${label || 'Query'}: `}
+    <Text color={'#74BEFF'}>{children}</Text>
   </Text>
 );
 
@@ -109,7 +109,7 @@ export const QuickSearch: FC<QuickSearchProps> = (props) => {
     selection: 0,
     start: 0,
   });
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
 
   const matchingItems = useMemo(() => {
     return getMatchingItems();
@@ -121,13 +121,13 @@ export const QuickSearch: FC<QuickSearchProps> = (props) => {
     function listenToRawKeyboard() {
       keypress(inkStdin.stdin);
       if (inkStdin.isRawModeSupported) inkStdin.setRawMode(true);
-      inkStdin.stdin.addListener("keypress", handleKeyPress);
+      inkStdin.stdin.addListener('keypress', handleKeyPress);
       return () => {
-        inkStdin.stdin.removeListener("keypress", handleKeyPress);
+        inkStdin.stdin.removeListener('keypress', handleKeyPress);
         if (inkStdin.isRawModeSupported) inkStdin.setRawMode(false);
       };
     },
-    [inkStdin, query, items, windowIndices]
+    [inkStdin, query, items, windowIndices],
   );
 
   const itemRef = useRef(items);
@@ -139,10 +139,10 @@ export const QuickSearch: FC<QuickSearchProps> = (props) => {
           selection: 0,
           start: 0,
         });
-        setQuery("");
+        setQuery('');
       }
     },
-    [items]
+    [items],
   );
 
   const getValue = () => {
@@ -157,7 +157,7 @@ export const QuickSearch: FC<QuickSearchProps> = (props) => {
 
   function getMatchingItems(alternateQuery?: string) {
     const matchQuery = alternateQuery || query;
-    if (matchQuery === "") return items;
+    if (matchQuery === '') return items;
     return items.filter((item) => getMatchIndex(item.label, matchQuery) >= 0);
   }
 
@@ -217,11 +217,7 @@ export const QuickSearch: FC<QuickSearchProps> = (props) => {
       } else {
         // Go down, potentially moving window
         newSelection++;
-        if (
-          limit &&
-          matchingItems.length > limit &&
-          newSelection - newStart >= limit - 1
-        ) {
+        if (limit && matchingItems.length > limit && newSelection - newStart >= limit - 1) {
           newStart += 1;
         }
       }
@@ -240,16 +236,16 @@ export const QuickSearch: FC<QuickSearchProps> = (props) => {
       return;
     }
     if (clearQueryChars.indexOf(ch) !== -1) {
-      setQuery("");
-    } else if (key.name === "return") {
+      setQuery('');
+    } else if (key.name === 'return') {
       onSelect(getValue());
-    } else if (key.name === "backspace") {
+    } else if (key.name === 'backspace') {
       removeCharFromQuery();
-    } else if (key.name === "up") {
+    } else if (key.name === 'up') {
       selectUp();
-    } else if (key.name === "down") {
+    } else if (key.name === 'down') {
       selectDown();
-    } else if (key.name === "tab") {
+    } else if (key.name === 'tab') {
       if (key.shift === false) {
         selectDown();
       } else {
@@ -275,11 +271,12 @@ export const QuickSearch: FC<QuickSearchProps> = (props) => {
         </Status>
       </Box>
       {visibleItems.length === 0 ? (
-        <Box key="no-items-found">No matches</Box>
+        <Box key="no-items-found">
+          <Text>No matches</Text>
+        </Box>
       ) : (
         visibleItems.map((item) => {
-          const isSelected =
-            matchingItems.indexOf(item) === windowIndices.selection;
+          const isSelected = matchingItems.indexOf(item) === windowIndices.selection;
           const isHighlighted = undefined;
           const itemProps: ItemProps = { isSelected, isHighlighted, item };
           const label = item.label;
@@ -311,8 +308,8 @@ export const QuickSearch: FC<QuickSearchProps> = (props) => {
       {!usingLimitedView ? null : (
         <Box key="num-visible-items">
           <HighlightComponent>
-            Viewing {begin}-{end} of {matchingItems.length} matching items (
-            {items.length} items overall)
+            Viewing {begin}-{end} of {matchingItems.length} matching items ({items.length} items
+            overall)
           </HighlightComponent>
         </Box>
       )}
@@ -326,8 +323,8 @@ const defaultProps = {
   limit: 0,
   forceMatchingQuery: true,
   clearQueryChars: [
-    "\u0015", // Ctrl + U
-    "\u0017", // Ctrl + W
+    '\u0015', // Ctrl + U
+    '\u0017', // Ctrl + W
   ],
   initialSelectionIndex: 0,
   indicatorComponent: IndicatorComponent,

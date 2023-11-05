@@ -7,16 +7,16 @@ import {
 } from '../types.js';
 import React from 'react';
 import { Box, Transform } from 'ink';
-import TextInput from 'ink-text-input';
+import TextInput from '@inkkit/ink-text-input';
 
 export class StringFormFieldManager implements FormFieldManager<FormFieldString> {
   public type: TypeOfField<FormFieldString> = 'string';
 
-  public renderField: React.FC<SpecificFormFieldRendererProps<FormFieldString>> = props => (
+  public renderField: React.FC<SpecificFormFieldRendererProps<FormFieldString>> = (props) => (
     <Box borderStyle={'round'} width="100%">
       <TextInput
         value={props.value ?? ''}
-        onChange={value => {
+        onChange={(value) => {
           props.onChange(value);
 
           if (props.field.regex && !props.field.regex.test(value)) {
@@ -32,18 +32,17 @@ export class StringFormFieldManager implements FormFieldManager<FormFieldString>
     </Box>
   );
 
-  public renderValue: React.FC<FormFieldValueRendererProps<FormFieldString>> = props => (
+  public renderValue: React.FC<FormFieldValueRendererProps<FormFieldString>> = (props) => (
     <Transform
       transform={
         props.value !== undefined && props.field.mask
-          ? text =>
+          ? (text) =>
               text
                 .split('')
                 .map(() => '*')
                 .join('')
-          : text => text
-      }
-    >
+          : (text) => text
+      }>
       {props.value}
     </Transform>
   );

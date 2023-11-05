@@ -36,7 +36,7 @@
     "build:demo": "tsc -p demo/tsconfig.json",
     "clean": "rm -rf dist demo/dist node_modules .turbo docs",
     "demo": "pnpm build:demo && node demo/dist/demo/overview.js",
-    "demo:custom": "pnpm build:demo && node demo/dist/demo/custommanager.js", 
+    "demo:custom": "pnpm build:demo && node demo/dist/demo/custommanager.js",
     "demo:imperative": "pnpm build:demo && node demo/dist/demo/imperative.js",
     "demo:packagejson": "pnpm build:demo && node demo/dist/demo/packagejson.js",
     "prettier:check": "prettier --check .",
@@ -44,7 +44,9 @@
     "prepublishOnly": "rm -rf dist && pnpm build"
   },
   "dependencies": {
-    "@inkkit/ink-multi-select": "workspace:*"
+    "@inkkit/ink-multi-select": "workspace:*",
+    "@inkkit/ink-select-input": "workspace:*",
+    "@inkkit/ink-text-input": "workspace:*"
   },
   "devDependencies": {
     "@internal/config": "workspace:^",

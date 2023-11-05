@@ -17,12 +17,6 @@ importers:
       ink:
         specifier: 4.4.1
         version: 4.4.1(@types/react@18.2.33)(react@18.2.0)
-      ink-select-input:
-        specifier: 5.0.0
-        version: 5.0.0(ink@4.4.1)(react@18.2.0)
-      ink-text-input:
-        specifier: 5.0.1
-        version: 5.0.1(ink@4.4.1)(react@18.2.0)
       prettier:
         specifier: 3.0.3
         version: 3.0.3
@@ -49,7 +43,7 @@ importers:
         specifier: 18.2.33
         version: 18.2.33
       ink-testing-library:
-        specifier: ^3.0.0
+        specifier: 3.0.0
         version: 3.0.0(@types/react@18.2.33)
 
   internal/config: {}
@@ -69,6 +63,12 @@ importers:
       '@inkkit/ink-multi-select':
         specifier: workspace:*
         version: link:../ink-multi-select
+      '@inkkit/ink-select-input':
+        specifier: workspace:*
+        version: link:../ink-select-input
+      '@inkkit/ink-text-input':
+        specifier: workspace:*
+        version: link:../ink-text-input
     devDependencies:
       '@internal/config':
         specifier: workspace:^
@@ -106,7 +106,7 @@ importers:
         version: 4.0.0
     devDependencies:
       '@internal/config':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../internal/config
       '@types/lodash.isequal':
         specifier: 4.5.7
@@ -164,6 +164,22 @@ importers:
       ts-node:
         specifier: 9.1.1
         version: 9.1.1(typescript@4.9.5)
+
+  packages/ink-text-input:
+    dependencies:
+      chalk:
+        specifier: ^5.2.0
+        version: 5.3.0
+      type-fest:
+        specifier: ^3.6.1
+        version: 3.13.1
+    devDependencies:
+      '@inkkit/ink-select-input':
+        specifier: workspace:*
+        version: link:../ink-select-input
+      '@internal/config':
+        specifier: workspace:*
+        version: link:../../internal/config
 
 packages:
 
@@ -2059,11 +2075,6 @@ packages:
     resolution: {integrity: sha512-UpzcLCXolUWcNu5HtVMHYdXJjArjsF9C0aNnquZYY4uW/Vu0miy5YoWvbV345HauVvcAUnpRuhMMcqTcGOY2+w==}
     engines: {node: '>=8'}
 
-  /escape-string-regexp@5.0.0:
-    resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
-    engines: {node: '>=12'}
-    dev: false
-
   /escodegen@2.1.0:
     resolution: {integrity: sha512-2NlIDTwUWJN0mRPQOdtQBzbUHvdGY2P1VXSyU83Q3xKxM7WHX2Ql8dKq782Q9TgQUNOLEzEYu9bzLNj1q88I5w==}
     engines: {node: '>=6.0'}
@@ -2239,14 +2250,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       escape-string-regexp: 1.0.5
-    dev: false
-
-  /figures@5.0.0:
-    resolution: {integrity: sha512-ej8ksPF4x6e5wvK9yevct0UCXh8TTFlWGVLlgjZuoBH1HwjIfKE/IdL5mq89sFA7zELi1VhKpmtDnrs7zWyeyg==}
-    engines: {node: '>=14'}
-    dependencies:
-      escape-string-regexp: 5.0.0
-      is-unicode-supported: 1.3.0
     dev: false
 
   /figures@6.0.1:
@@ -2704,20 +2707,6 @@ packages:
     resolution: {integrity: sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==}
     dev: false
 
-  /ink-select-input@5.0.0(ink@4.4.1)(react@18.2.0):
-    resolution: {integrity: sha512-VkLEogN3KTgAc0W/u9xK3+44x8JyKfmBvPQyvniJ/Hj0ftg9vWa/YecvZirevNv2SAvgoA2GIlTLCQouzgPKDg==}
-    engines: {node: '>=14.16'}
-    peerDependencies:
-      ink: ^4.0.0
-      react: ^18.0.0
-    dependencies:
-      arr-rotate: 1.0.0
-      figures: 5.0.0
-      ink: 4.4.1(@types/react@18.2.33)(react@18.2.0)
-      lodash.isequal: 4.5.0
-      react: 18.2.0
-    dev: false
-
   /ink-testing-library@2.1.0(@types/react@18.2.33):
     resolution: {integrity: sha512-7TNlOjJlJXB33vG7yVa+MMO7hCjaC1bCn+zdpSjknWoLbOWMaFdKc7LJvqVkZ0rZv2+akhjXPrcR/dbxissjUw==}
     engines: {node: '>=10'}
@@ -2741,19 +2730,6 @@ packages:
     dependencies:
       '@types/react': 18.2.33
     dev: true
-
-  /ink-text-input@5.0.1(ink@4.4.1)(react@18.2.0):
-    resolution: {integrity: sha512-crnsYJalG4EhneOFnr/q+Kzw1RgmXI2KsBaLFE6mpiIKxAtJLUnvygOF2IUKO8z4nwkSkveGRBMd81RoYdRSag==}
-    engines: {node: '>=14.16'}
-    peerDependencies:
-      ink: ^4.0.0
-      react: ^18.0.0
-    dependencies:
-      chalk: 5.3.0
-      ink: 4.4.1(@types/react@18.2.33)(react@18.2.0)
-      react: 18.2.0
-      type-fest: 3.13.1
-    dev: false
 
   /ink@4.4.1(@types/react@18.2.33)(react@18.2.0):
     resolution: {integrity: sha512-rXckvqPBB0Krifk5rn/5LvQGmyXwCUpBfmTwbkQNBY9JY8RSl3b8OftBNEYxg4+SWUhEKcPifgope28uL9inlA==}
@@ -3016,11 +2992,6 @@ packages:
   /is-unicode-supported@0.1.0:
     resolution: {integrity: sha512-knxG2q4UC3u8stRGyAVJCOdxFmv5DZiRcdlIaAQXAbSfJya+OhopNotLQrstBhququ4ZpuKbDc/8S6mgXgPFPw==}
     engines: {node: '>=10'}
-    dev: false
-
-  /is-unicode-supported@1.3.0:
-    resolution: {integrity: sha512-43r2mRvz+8JRIKnWJ+3j8JtjRKZ6GmjzfaE/qiBJnikNnYv/6bagRJ1kUhNk8R5EX/GkobD+r+sfxCPJsiKBLQ==}
-    engines: {node: '>=12'}
     dev: false
 
   /is-unicode-supported@2.0.0:

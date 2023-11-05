@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormFieldFloat, FormFieldInteger, SpecificFormFieldRendererProps } from './types.js';
 import { Box, Text, useInput } from 'ink';
-import TextInput from 'ink-text-input';
+import TextInput from '@inkkit/ink-text-input';
 
 const FLOAT_REGEX = /^-?((\d+)|(\d*\.\d+))$/;
 const INTEGER_REGEX = /^-?\d+$/;

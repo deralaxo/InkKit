@@ -1,4 +1,4 @@
-# ink-select-input [![test](https://github.com/vadimdemedes/ink-select-input/workflows/test/badge.svg)](https://github.com/vadimdemedes/ink-select-input/actions)
+# ink-select-input
 
 This is a modified version of [ink-select-input](https://github.com/vadimdemedes/ink-select-input)
 

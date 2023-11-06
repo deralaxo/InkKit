@@ -12,4 +12,5 @@ This repo consists of refactored [Ink](https://github.com/vadimdemedes/ink) comp
 |[@inkkit/ink-form](https://github.com/deralaxo/InkKit/tree/main/packages/ink-form)                          |
 |[@inkkit/ink-multi-select](https://github.com/deralaxo/InkKit/tree/main/packages/ink-multi-select)          |
 |[@inkkit/ink-quicksearch-input](https://github.com/deralaxo/InkKit/tree/main/packages/ink-quicksearch-input)|
+|[@inkkit/ink-image](https://github.com/deralaxo/InkKit/tree/main/packages/ink-image)                        |
 |[@inkkit/ink-table](https://github.com/deralaxo/InkKit/tree/main/packages/ink-table)                        |

@@ -6,6 +6,9 @@
   "types": "dist/QuickSearchInput.d.ts",
   "type": "module",
   "author": "John O'Sullivan <john@eximchain.com>",
+  "contributors": [{
+    "name": "Dawid Harat"
+  }],
   "license": "MIT",
   "scripts": {
     "build": "tsc",

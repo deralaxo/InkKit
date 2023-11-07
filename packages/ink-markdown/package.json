@@ -1,12 +1,8 @@
 {
-  "name": "@inkkit/ink-text-input",
-  "version": "5.0.2",
-  "description": "Text input component for Ink",
-	"author": {
-		"name": "Vadim Demedes",
-		"email": "vadimdemedes@hey.com",
-		"url": "https://github.com/vadimdemedes"
-	},
+  "name": "@inkkit/ink-markdown",
+  "version": "1.0.0",
+  "description": "Render markdown text using Ink",
+  "author": "Cameron Hunter <hello@cameronhunter.co.uk>",
   "contributors": [{
     "name": "Dawid Harat"
   }],
@@ -15,22 +11,22 @@
     "type": "git",
     "url": "git+https://github.com/deralaxo/InkKit.git"
   },
-  "homepage": "https://github.com/deralaxo/InkKit/tree/main/packages/ink-text-input#readme",
+  "homepage": "https://github.com/deralaxo/InkKit/tree/main/packages/ink-markdown#readme",
   "bugs": {
     "url": "https://github.com/deralaxo/InkKit/issues"
   },
-	"keywords": [
-		"ink",
-		"text",
-		"input",
-		"component",
-		"jsx",
-		"react",
-		"stdin",
-		"keypress",
-		"search",
-		"query"
-	],
+  "keywords": [
+    "ink-component",
+    "ink",
+    "component",
+    "markdown",
+    "react",
+    "jsx",
+    "terminal",
+    "term",
+    "console",
+    "command-line"
+  ],
   "type": "module",
   "main": "dist/index.js",
   "files": [
@@ -43,12 +39,13 @@
     "demo": "pnpm build:demo && node demo/dist/demo/index.js",
     "prepublishOnly": "rm -rf dist && pnpm build"
   },
-	"dependencies": {
-		"chalk": "^5.2.0",
-		"type-fest": "^3.6.1"
-	},
   "devDependencies": {
     "@internal/config": "workspace:*",
-    "@inkkit/ink-select-input": "workspace:*"
+    "@types/marked-terminal": "6.0.0"
+  },
+  "dependencies": {
+    "dedent": "1.5.1",
+    "marked": "9.1.5",
+    "marked-terminal": "6.0.0"
   }
 }

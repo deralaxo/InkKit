@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Complex user-friendly form component for React Ink",
   "author": "Lukas Bach <lbach@outlook.de>",
+  "contributors": [{
+    "name": "Dawid Harat"
+  }],
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",

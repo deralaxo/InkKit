@@ -5,6 +5,9 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Matic Zavadlal <matic.zavadlal@gmail.com>",
+  "contributors": [{
+    "name": "Dawid Harat"
+  }],
   "license": "MIT",
   "repository": {
     "type": "git",

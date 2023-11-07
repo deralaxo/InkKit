@@ -7,6 +7,9 @@
 		"email": "vdemedes@gmail.com",
 		"url": "https://www.github.com/vadimdemedes"
 	},
+  "contributors": [{
+    "name": "Dawid Harat"
+  }],
 	"license": "MIT",
 	"repository": {
 		"type": "git",

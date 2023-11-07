@@ -42,5 +42,10 @@
     "@types/node": "20.8.10",
     "@types/react": "18.2.33",
     "ink-testing-library": "3.0.0"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@types/marked-terminal@6.0.0": "patches/@types__marked-terminal@6.0.0.patch"
+    }
   }
 }

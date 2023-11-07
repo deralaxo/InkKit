@@ -6,6 +6,10 @@ This is a modified version of [ink-select-input](https://github.com/vadimdemedes
 
 Looking for a version compatible with Ink 2.x? Check out [this release](https://github.com/vadimdemedes/ink-select-input/tree/v3.1.2).
 
+![Demo 1 example](https://github.com/deralaxo/InkKit/blob/main/packages/ink-select-input/demo/demo1.gif?raw=true)
+
+![Demo 2 example](https://github.com/deralaxo/InkKit/blob/main/packages/ink-select-input/demo/demo2.gif?raw=true)
+
 ## Install
 
 ```

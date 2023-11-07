@@ -2,7 +2,7 @@ import { render } from 'ink';
 import { Form } from '../src/Form.js';
 import React from 'react';
 import { AbstractFormField, FormFieldManager } from '../src/types.js';
-import TextInput from 'ink-text-input';
+import TextInput from '@inkkit/ink-text-input';
 
 type CustomField = AbstractFormField<'custom', string> & { placeholder: string; length: number };
 type CustomManager = FormFieldManager<CustomField>;

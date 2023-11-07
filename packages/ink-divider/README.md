@@ -4,6 +4,8 @@ Divider component for [Ink 4](https://github.com/vadimdemedes/ink)
 
 Refactored version of [Jure's ink-divider](https://github.com/JureSotosek/ink-divider)
 
+![Demo example](https://github.com/deralaxo/InkKit/blob/main/packages/ink-divider/demo/demo.jpg?raw=true)
+
 ## Install
 
 ```
@@ -13,9 +15,9 @@ $ npm install @inkkit/ink-divider
 ## Usage
 
 ```jsx
-import React from "react";
-import { render } from "ink";
-import Divider from "@inkkit/ink-divider";
+import React from 'react';
+import { render } from 'ink';
+import Divider from '@inkkit/ink-divider';
 
 const Demo = () => {
   return <Divider title="Title" />;
